@@ -42,6 +42,10 @@ console.log(consume("Mary","Poppins", greeting)); // Hello Mary Poppins, nice to
 
 // Explanation: 
 
+// Because `internal` has been defined in the same lexical environment of 
+// `nestedFunction`, so it created a closure where `nestedFunction` has access
+// to variables defined in the same scope
+
 
 const external = "I'm outside the function";
 
