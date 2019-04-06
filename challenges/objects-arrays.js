@@ -133,10 +133,24 @@ zooAnimals = [{"animal_name":"Jackal, asiatic","population":5,"scientific_name":
 /* Request 1: .forEach()
 
 The zoo wants to display both the scientific name and the animal name in front of the habitats.  Return an array with only the animal and scientific names in it.  The individual values in the array should look like this "Name: Jackal, asiatic, Scientific: Canis aureus."
+*/
 
+/*
+   NOTE: I am using .forEach because that's the request but it would 
+   make more sense to me to use .map, so I wouldn't have to instantiate a new animalNames array
+   beforehand and push names into it, but would just use the new array returned automatically
+   by .map
 */
 const animalNames = [];
+
+zooAnimals.forEach(animal => {
+  let formattedName = `Name: ${animal.animal_name}, Scientific: ${animal.scientific_name}`;
+  animalNames.push(formattedName);
+})
+
 console.log(animalNames);
+
+
 
 /* Request 2: .map()    
 
