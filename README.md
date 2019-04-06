@@ -58,20 +58,20 @@ Edit this document to include your answers after each question. Make sure to lea
 
     The four rules are:
 
-    1. Global binding:
+    1. Global binding:  
         in the global scope, `this` refers to the `Window` or
         `Global` object.
 
-    2. Implicit binding:
+    2. Implicit binding:  
         inside an object, `this` refers to the object itself.
         So, if I call `this` in a method on the object, `this` refers to the
         object on the left of the method call.
 
-    3. New binding:
+    3. New binding:  
         inside a constructor function, `this` refers to the new
         object instance being created.
 
-    4. Explicit binding:
+    4. Explicit binding:  
         whenever the `.call`, `.apply`, or `.bind` Javascript methods are used,
         `this` refers explicitly to the object passed in as the first argument in the
         method call.
