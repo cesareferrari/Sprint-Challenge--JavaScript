@@ -30,13 +30,62 @@ Edit this document to include your answers after each question. Make sure to lea
 
 1. Describe the biggest difference between `.forEach` & `.map`.
 
+    `.forEach` will iterate through all items in an array and apply the callback
+    function to each item, potentially mutating the actual item in the original
+    array.
+
+    `.map` will also iterate through the array items one by one but will return
+      a **new** array with each item modified by the callback. So, the original items
+      in the original array are not mutated, but a new array is created with the
+      return values of the callback.
+
+
 2. What is the difference between a function and a method?
+
+    A method is a function defined on an object.
+
 
 3. What is closure?
 
+    Closure is the combination of a function and the lexical environment within
+    which that function was declared. So, the function has access to all the
+    variables that were set in the scope of the function declaration, even if
+    the function is called at a later time.
+
+
+
 4. Describe the four rules of the 'this' keyword.
 
+    The four rules are:
+
+    1. Global binding:  
+        in the global scope, `this` refers to the `Window` or
+        `Global` object.
+
+    2. Implicit binding:  
+        inside an object, `this` refers to the object itself.
+        So, if I call `this` in a method on the object, `this` refers to the
+        object on the left of the method call.
+
+    3. New binding:  
+        inside a constructor function, `this` refers to the new
+        object instance being created.
+
+    4. Explicit binding:  
+        whenever the `.call`, `.apply`, or `.bind` Javascript methods are used,
+        `this` refers explicitly to the object passed in as the first argument in the
+        method call.
+
+
 5. Why do we need super() in an extended class?
+
+    `super` is used in an extended class `constructor` method in order to call the
+    parent constructor method and to pass the arguments up the inheritance chain, so
+    to avoid duplicating the properties of the extended class, since the
+    child class inherits these properties from its parent.
+
+
+
 
 ## Project Set up
 
